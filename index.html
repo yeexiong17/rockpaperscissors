@@ -8,46 +8,65 @@
 </head>
 <body>
     <script>
-     
+
         function getComputerChoice(playChoice){
             return  playChoice[Math.floor(Math.random() * playChoice.length)];
         }
 
-        function playGame(playerSelection, computerSelection){
+        function playRound(playerSelection, computerSelection){
             
             if(playerSelection == "rock" && computerSelection == "Rock"){
                 console.log("This game is a draw!");
             }else if(playerSelection == "rock" && computerSelection == "Paper"){
                 console.log("You lose! Paper beats Rock");
+                p2 ++ ;
+
             }else if(playerSelection == "rock" && computerSelection == "Scissors"){
                 console.log("You win! Rock beats scissors");
+                p1 ++ ;
             }
 
             if(playerSelection == "paper" && computerSelection == "Rock"){
                 console.log("You win! Paper beats Rock");
+                p1 ++ ;
             }else if(playerSelection == "paper" && computerSelection == "Paper"){
                 console.log("This game is a draw!");
             }else if(playerSelection == "paper" && computerSelection == "Scissors"){
                 console.log("You lose! Scissors beats paper");
+                p2 ++;
             }
 
             if(playerSelection == "scissors" && computerSelection == "Rock"){
                 console.log("You lose! Rock beats scissors");
+                p2 ++ ;
             }else if(playerSelection == "scissors" && computerSelection == "Paper"){
                 console.log("You win! Scissors beats paper");
+                p1 ++ ;
             }else if(playerSelection == "scissors" && computerSelection == "Scissors"){
                 console.log("This game is a draw");
             }
+
         }
 
         const playChoice = ["Rock", "Paper", "Scissors"];
+        let p1 = 0, p2 = 0;
 
-        const playerSelection = prompt("Enter your choice : ");
-        const computerSelection = getComputerChoice(playChoice);
-        console.log(computerSelection);
-        console.log(playGame(playerSelection.toLowerCase(), computerSelection));
+        for(let i = 0; i<5; i++){
+            const playerSelection = prompt("Enter your choice : ");
+            const computerSelection = getComputerChoice(playChoice);
+            console.log(computerSelection);
+            playRound(playerSelection.toLowerCase(), computerSelection);
 
+        }
         
+        console.log("Your Score : " + p1 + " Computer Score : " + p2);
+        if(p1 > p2){
+            console.log("Congratulation, You win!");
+        }else if (p1 < p2){
+            console.log("You lose! Try again next time.");
+        }else{
+            console.log("It a draw!");
+        }
     
     </script>
 </body>
