@@ -8,35 +8,47 @@
 </head>
 <body>
     <script>
-        var showArr = ["Rock", "Paper", "Scissors"]
-        function computerPlay(showArr){
-            return showArr[Math.floor(Math.random()*showArr.length)];
+     
+        function getComputerChoice(playChoice){
+            return  playChoice[Math.floor(Math.random() * playChoice.length)];
         }
+
+        function playGame(playerSelection, computerSelection){
+            
+            if(playerSelection == "rock" && computerSelection == "Rock"){
+                console.log("This game is a draw!");
+            }else if(playerSelection == "rock" && computerSelection == "Paper"){
+                console.log("You lose! Paper beats Rock");
+            }else if(playerSelection == "rock" && computerSelection == "Scissors"){
+                console.log("You win! Rock beats scissors");
+            }
+
+            if(playerSelection == "paper" && computerSelection == "Rock"){
+                console.log("You win! Paper beats Rock");
+            }else if(playerSelection == "paper" && computerSelection == "Paper"){
+                console.log("This game is a draw!");
+            }else if(playerSelection == "paper" && computerSelection == "Scissors"){
+                console.log("You lose! Scissors beats paper");
+            }
+
+            if(playerSelection == "scissors" && computerSelection == "Rock"){
+                console.log("You lose! Rock beats scissors");
+            }else if(playerSelection == "scissors" && computerSelection == "Paper"){
+                console.log("You win! Scissors beats paper");
+            }else if(playerSelection == "scissors" && computerSelection == "Scissors"){
+                console.log("This game is a draw");
+            }
+        }
+
+        const playChoice = ["Rock", "Paper", "Scissors"];
+
+        const playerSelection = prompt("Enter your choice : ");
+        const computerSelection = getComputerChoice(playChoice);
+        console.log(computerSelection);
+        console.log(playGame(playerSelection.toLowerCase(), computerSelection));
+
         
-
-        function playround(playerSelection, computerSelection){
-            computerSelection = computerPlay().toLowerCase();
-            playerSelection = playerSelection.toLowerCase();
-        if (computerSelection == playerSelection) {
-            console.log("Tie game!");
-        } else if ((computerSelection == "rock" && playerSelection == "sissors") || (computerSelection == "sissors" && playerSelection == "paper") || (computerSelection == "paper" && player Selection == "rock"))
-        {
-            console.log("You lose!. " + computerSelection + " beats " + playerSelection);
-        } else if ((computerSelection == "rock" && playerSelection == "paper") || (computerSelection == "paper" && playerSelection) || computerSelection =="sissors" && playerSelection == "rock")
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
+    
     </script>
 </body>
 </html>
