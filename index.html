@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var showArr = ["Rock", "Paper", "Scissors"]
+        function computerPlay(showArr){
+            return showArr[Math.floor(Math.random()*showArr.length)];
+        }
+        
+
+        function playround(playerSelection, computerSelection){
+            computerSelection = computerPlay().toLowerCase();
+            playerSelection = playerSelection.toLowerCase();
+        if (computerSelection == playerSelection) {
+            console.log("Tie game!");
+        } else if ((computerSelection == "rock" && playerSelection == "sissors") || (computerSelection == "sissors" && playerSelection == "paper") || (computerSelection == "paper" && player Selection == "rock"))
+        {
+            console.log("You lose!. " + computerSelection + " beats " + playerSelection);
+        } else if ((computerSelection == "rock" && playerSelection == "paper") || (computerSelection == "paper" && playerSelection) || computerSelection =="sissors" && playerSelection == "rock")
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>
