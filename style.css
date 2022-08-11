@@ -17,8 +17,7 @@ body{
     color: #b554bc;
     text-align: center;
     font-size: 2.2rem;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-}
+    font-family: 'Montserrat', sans-serif;}
 
 #result{
     color: rgb(236, 148, 245);
@@ -26,8 +25,7 @@ body{
     margin-top: 3rem;
     margin-right: 2rem;
     font-size: 1rem;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-}
+    font-family: 'Montserrat', sans-serif;}
 
 #scoreOutput{
     text-align: center;
